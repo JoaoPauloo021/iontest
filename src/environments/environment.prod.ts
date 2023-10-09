@@ -16,11 +16,11 @@ export const environment = {
 
   // Altere estas chaves conforme seu próprio projeto no Firebase.com.
   firebase: {
-    apiKey: 'AIzaSyB3qGcFb11tOQGm2_vOnUxd7rQaBhcMkPQ',
-    authDomain: 'ionteste-2023.firebaseapp.com',
-    projectId: 'ionteste-2023',
-    storageBucket: 'ionteste-2023.appspot.com',
-    messagingSenderId: '788295881622',
-    appId: '1:788295881622:web:b1ea5f214104177569c3b7'
+    apiKey: "AIzaSyD5npM7FZyps1xr5B2UQP4QPGsVFw38BmU",
+    authDomain: "projetoapp-c7db0.firebaseapp.com",
+    projectId: "projetoapp-c7db0",
+    storageBucket: "projetoapp-c7db0.appspot.com",
+    messagingSenderId: "1092590113436",
+    appId: "1:1092590113436:web:0a7910ba5114f08ddf1359"
   }
 };
