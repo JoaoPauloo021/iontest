@@ -71,13 +71,16 @@ const routes: Routes = [
     path: 'device',
     loadChildren: () => import('./tests/device/device.module').then( m => m.DevicePageModule)
   },
+  {
+    path: 'new',
+    loadChildren: () => import('./pages/new/new.module').then( m => m.NewPageModule)
+  },
   // Rota curinga. Deve ser sempre a última rota desta lista.
   {
     path: '**',
     redirectTo: 'e404',
     pathMatch: 'full'
   },
-  
 
 
 ];
