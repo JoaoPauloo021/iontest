@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true" *ngIf="view">
 
   <ion-card *ngIf="docView.status == 'success'">
-    <img [alt]="docView.name" [src]="docView.image" style="display: block; margin: auto;" />
+    <ion-img [alt]="docView.name" [src]="docView.image" style="display: block; margin: auto;"></ion-img>
     <ion-card-header>
       <ion-card-title>{{ docView.name }}</ion-card-title>
       <ion-card-subtitle>
@@ -22,12 +22,13 @@
       {{ docView.description }}
       <ul style="padding: 0 0 0 1rem;">
         <li><strong>Local: </strong>{{ docView.location }}</li>
+        <li><strong>GPS: </strong><a href="https://www.google.com/maps/place/{{ docView.geolocation }}" target="_blank">{{ docView.geolocation }}</a></li>
       </ul>
 
       <ion-grid>
         <ion-row>
           <ion-col class="ion-text-center">
-            <ion-button color="warning"><ion-icon name="create" slot="start"></ion-icon>Editar</ion-button>
+            <ion-button color="warning" [routerLink]="'edit/' + docView.id"><ion-icon name="create" slot="start"></ion-icon>Editar</ion-button>
           </ion-col>
           <ion-col class="ion-text-center">
             <ion-button color="danger" (click)="delete(docView.id)"><ion-icon name="trash"

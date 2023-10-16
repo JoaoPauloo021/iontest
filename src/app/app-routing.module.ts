@@ -69,19 +69,26 @@ const routes: Routes = [
   },
   {
     path: 'device',
+    title: environment.appName + ' - Testes com Device',
     loadChildren: () => import('./tests/device/device.module').then( m => m.DevicePageModule)
   },
   {
     path: 'new',
-    loadChildren: () => import('./pages/new/new.module').then( m => m.NewPageModule)
+    title: environment.appName + ' - Novo Documento',
+    loadChildren: () => import('./pages/document/document.module').then( m => m.DocumentPageModule)
   },
+  {
+    path: 'edit/:id',
+    title: environment.appName + ' - Editar Documento',
+    loadChildren: () => import('./pages/document/document.module').then( m => m.DocumentPageModule)
+  },
+
   // Rota curinga. Deve ser sempre a última rota desta lista.
   {
     path: '**',
     redirectTo: 'e404',
     pathMatch: 'full'
   },
-
 
 ];
 

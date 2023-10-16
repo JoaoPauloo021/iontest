@@ -14,6 +14,12 @@ export const environment = {
   // Coleção principal do Firebase.
   dbCollection: 'things',
 
+  // Imagem padrão dos documentos.
+  dbDefaultImage: 'assets/generic.png',
+
+  // Formatos de imagens permitidos.
+  dbImageFormats: ['gif', 'jpg', 'jpeg', 'png', 'bmp', 'tiff', 'tif'],
+
   // Altere estas chaves conforme seu próprio projeto no Firebase.com.
   firebase: {
     apiKey: "AIzaSyD5npM7FZyps1xr5B2UQP4QPGsVFw38BmU",
